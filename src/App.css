@@ -1,0 +1,130 @@
+.page {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.flip-card {
+  width: min(100%, 1050px);
+  min-height: 680px;
+  perspective: 1600px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  min-height: 680px;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.terminal-card {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem;
+  text-align: center;
+
+  background: rgba(13, 17, 23, 0.9);
+  border: 1px solid #30363d;
+  border-radius: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.command span,
+h2,
+.skill {
+  color: #00ff41;
+}
+
+.command {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: clamp(3rem, 7vw, 5.8rem);
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: 1.25rem;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.description {
+  max-width: 850px;
+  font-size: 1.35rem;
+  line-height: 1.7;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  max-width: 850px;
+}
+
+.skill {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  border-radius: 999px;
+  background: rgba(0, 255, 65, 0.08);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.hint {
+  margin-top: 2rem;
+  color: #8b949e;
+  font-size: 0.95rem;
+}
+
+.contact-card {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 20;
+
+  padding: 1.25rem 1.5rem;
+  min-width: 260px;
+
+  background: rgba(13, 17, 23, 0.92);
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+
+  color: #f0f6fc;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.8rem;
+  color: #00ff41;
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+}
+
+.contact-card p {
+  margin: 0.45rem 0;
+  font-size: 0.95rem;
+}
