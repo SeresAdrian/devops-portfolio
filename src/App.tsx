@@ -1,3 +1,4 @@
+import { useState } from "react";
 import MatrixBackground from "./MatrixBackground";
 import "./App.css";
 
@@ -9,14 +10,21 @@ const skills = [
 ];
 
 export default function App() {
+  const [flipped, setFlipped] = useState(false);
   return (
     <>
       <MatrixBackground />
 
       <main className="page">
-        <div className="flip-card">
+          <div
+            className={`flip-card ${flipped ? "is-flipped" : ""}`}
+            onClick={() => setFlipped(!flipped)}
+          >
           <div className="flip-inner">
             <section className="terminal-card front">
+              <button className="flip-icon" type="button">
+                ↻
+              </button>
               <p className="command"><span>$</span> whoami</p>
 
               <h1>DevOps / Platform Engineer / SRE</h1>
@@ -37,10 +45,13 @@ export default function App() {
                 reliability, security, observability, and cost optimization.
               </p>
 
-              <p className="hint">Hover to run skills --list</p>
+              <p className="hint">Click to run skills --list</p>
             </section>
 
             <section className="terminal-card back">
+              <button className="flip-icon" type="button">
+                ↻
+              </button>
               <p className="command"><span>$</span> skills --list</p>
 
               <h1>Technical Skills</h1>
@@ -53,7 +64,7 @@ export default function App() {
                 ))}
               </div>
 
-              <p className="hint">Move away to return to whoami</p>
+              <p className="hint">Click to return to whoami</p>
             </section>
           </div>
         </div>
