@@ -5,8 +5,8 @@ import "./App.css";
 const skills = [
   "Azure", "GCP", "Terraform", "Networking", "Security", "Linux", "Bash",
   "Docker", "Kubernetes", "PowerShell", "CI/CD", "Git", "GitHub", "Windows",
-  "Active Directory", "AzCLI", "AzCopy", "KQL", "Observability (LGTM)",
-  "Trivy", "SonarQube", "Python"
+  "Active Directory","KQL", "Observability (LGTM)", "Platform & Infrastructure",
+  "Trivy", "SonarQube", "Python","AzCLI", "AzCopy", "Software"
 ];
 
 export default function App() {

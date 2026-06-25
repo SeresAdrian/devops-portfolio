@@ -85,12 +85,14 @@ h1 {
   margin: 1rem 0;
   font-size: clamp(3rem, 7vw, 5.8rem);
   line-height: 1.05;
+  color: #f0f6fc;
 }
 
 h2 {
   font-size: 1.25rem;
   letter-spacing: 0.08em;
   font-weight: 500;
+  color: #00ff41;
 }
 
 .description {
