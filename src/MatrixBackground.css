@@ -1,34 +1,11 @@
-.matrix-bg {
+.matrix-canvas {
   position: fixed;
   inset: 0;
-
   z-index: 0;
 
-  overflow: hidden;
-  background: #050505;
+  width: 100vw;
+  height: 100vh;
 
+  background: #000;
   pointer-events: none;
-}
-
-.matrix-column {
-  position: absolute;
-  top: -100%;
-  width: 18px;
-  color: #00ff41;
-  font-family: monospace;
-  font-size: 16px;
-  line-height: 16px;
-  opacity: 0.25;
-  word-break: break-all;
-  animation: matrix-fall linear infinite;
-}
-
-@keyframes matrix-fall {
-  from {
-    transform: translateY(-100%);
-  }
-
-  to {
-    transform: translateY(220%);
-  }
 }
